@@ -18,30 +18,41 @@ import exceptions.UserFormatException;
 
 /**
  * interfaz que contine los metodos firmados necesarios.
+ *
  * @author ibai , jon , alex , markel
  */
 public interface Signable {
-/** 
- * metodo para que un usuario inicie sesion.
- * @param user
- * @return  Un objeto User
- * @throws LoginNotFoundException
- * @throws ConnectionNotAvaiableException
- * @throws PasswordNotFoundException
- * @throws Exception 
- */
+
+    /**
+     * metodo para que un usuario inicie sesion.
+     *
+     * @param user
+     * @return Un objeto User
+     * @throws LoginNotFoundException
+     * @throws ConnectionNotAvaiableException
+     * @throws PasswordNotFoundException
+     * @throws Exception
+     */
     public User signIn(User user) throws LoginNotFoundException,
-            ConnectionNotAvaiableException, PasswordNotFoundException,Exception;
-/**
- * Metodo para que se de alta un Usuario
- * @param user
- * @return Un objeto User
- * @throws LoginExistException
- * @throws ConnectionNotAvaiableException
- * @throws Exception 
- */
+            ConnectionNotAvaiableException, PasswordNotFoundException, Exception;
+
+    /**
+     * Metodo para que se de alta un Usuario
+     *
+     * @param user
+     * @return Un objeto User
+     * @throws LoginExistException
+     * @throws ConnectionNotAvaiableException
+     * @throws exceptions.DatabaseNotAvaiableException
+     * @throws exceptions.EmailFormatException
+     * @throws exceptions.FullNameFormatExeception
+     * @throws exceptions.PasswordFormatException
+     * @throws exceptions.RepeatPasswordException
+     * @throws exceptions.UserFormatException
+     * @throws Exception
+     */
     public User signUp(User user) throws LoginExistException,
-            ConnectionNotAvaiableException,DatabaseNotAvaiableException,
-            EmailFormatException,FullNameFormatExeception,PasswordFormatException
-            ,RepeatPasswordException,UserFormatException,Exception;
+            ConnectionNotAvaiableException, DatabaseNotAvaiableException,
+            EmailFormatException, FullNameFormatExeception, PasswordFormatException,
+             RepeatPasswordException, UserFormatException, Exception;
 }

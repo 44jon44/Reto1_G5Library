@@ -56,13 +56,5 @@ public class Message implements Serializable {
     public void setOrder(Order order) {
         this.order = order;
     }
-
-    /**
-     * @param enum Order = posibles ordenes o excepciones ya definidas
-     */
-    private enum Order {
-        SIGN_IN, SIGN_UP, EXCEPTION_CONNECTION, EXCEPTION_LOGIN_EXIST,
-        EXCEPTION_LOGIN_NOT_EXIST, EXCEPTION_PASSWORD_NOT_FOUND,
-        CONNECTION_NOT_AVAIABLE,DATABASE_NOT_AVAIABLE_EXCEPTION,OK
-    };
+    
 }
