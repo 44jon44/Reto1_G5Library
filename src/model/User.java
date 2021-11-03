@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.security.Timestamp;
 
 /**
- * esta clase java bean es el obejto Usuario.
+ * Java Bean User
  *
  * @author ibai , jon , alex , markel
  */
@@ -25,13 +25,35 @@ public class User implements Serializable {
     private Timestamp lastPasswordChange;
 
     /**
-     * Constructor vacio de la clase User.
+     * Constructor vacio de la clase User
      */
     public User() {
     }
+    
     /**
-     * getters y setters de los diferentes atributos de la clase User
+     * Constructor de la clase User que recibe 2 parámetros
+     * @param login login del usuario
+     * @param password  contraseña del usuario
      */
+    public User(String login, String password){
+        this.login = login;
+        this.password = password;
+    }
+    
+    /**
+     * Constructor de la clase User que recibe 3 parámetros
+     * @param login login de usuario
+     * @param fullName  nombre completo del usuario
+     * @param password  contraseña del usuario
+     */
+    public User(String login, String fullName, String password){
+        this.login = login;
+        this.fullName = fullName;
+        this.password = password;
+    }
+    
+    //getters y setters de la clase User
+    
     public int getId() {
         return id;
     }
