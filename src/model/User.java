@@ -41,13 +41,15 @@ public class User implements Serializable {
     }
     
     /**
-     * Constructor de la clase User que recibe 3 parámetros
-     * @param login login de usuario
+     * Constructor de la clase User que recibe 4 parámetros
+     * @param login login del usuario
+     * @param email email del usuario
      * @param fullName  nombre completo del usuario
      * @param password  contraseña del usuario
      */
-    public User(String login, String fullName, String password){
+    public User(String login,String email, String fullName, String password){
         this.login = login;
+        this.email = email;
         this.fullName = fullName;
         this.password = password;
     }
