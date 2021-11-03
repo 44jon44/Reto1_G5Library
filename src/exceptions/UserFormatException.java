@@ -11,19 +11,6 @@ package exceptions;
  */
 public class UserFormatException extends Exception {
 
-    /**
-     * Creates a new instance of <code>UserFormatException</code> without detail
-     * message.
-     */
-    public UserFormatException() {
-    }
-
-    /**
-     * Constructs an instance of <code>UserFormatException</code> with the
-     * specified detail message.
-     *
-     * @param msg the detail message.
-     */
     public UserFormatException(String msg) {
         super("El formato del nombre del usuario no es correcto");
     }

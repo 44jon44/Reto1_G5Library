@@ -11,20 +11,7 @@ package exceptions;
  */
 public class RepeatPasswordException extends Exception {
 
-    /**
-     * Creates a new instance of <code>RepeatPasswordException</code> without
-     * detail message.
-     */
     public RepeatPasswordException() {
-    }
-
-    /**
-     * Constructs an instance of <code>RepeatPasswordException</code> with the
-     * specified detail message.
-     *
-     * @param msg the detail message.
-     */
-    public RepeatPasswordException(String msg) {
         super("Las contraseñas no coinciden");
     }
 }

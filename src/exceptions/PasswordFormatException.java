@@ -11,20 +11,7 @@ package exceptions;
  */
 public class PasswordFormatException extends Exception {
 
-    /**
-     * Creates a new instance of <code>PasswordFormatException</code> without
-     * detail message.
-     */
     public PasswordFormatException() {
-    }
-
-    /**
-     * Constructs an instance of <code>PasswordFormatException</code> with the
-     * specified detail message.
-     *
-     * @param msg the detail message.
-     */
-    public PasswordFormatException(String msg) {
         super("El formato de la contraseña no es correcto");
     }
 }

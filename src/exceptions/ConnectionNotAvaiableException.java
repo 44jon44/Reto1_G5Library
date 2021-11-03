@@ -10,14 +10,8 @@ package exceptions;
  */
 public class ConnectionNotAvaiableException extends Exception {
 
-    /**
-     * Creates a new instance of <code>ConnectionNotAvaiableException</code>
-     * without detail message.
-     */
-    public ConnectionNotAvaiableException() {
-    }
 
-    public ConnectionNotAvaiableException(String msg) {
+    public ConnectionNotAvaiableException() {
         super("Error, no hay conexiones disponibles");
     }
 }
