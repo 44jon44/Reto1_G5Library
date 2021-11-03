@@ -17,17 +17,17 @@ import exceptions.RepeatPasswordException;
 import exceptions.UserFormatException;
 
 /**
- * interfaz que contine los metodos firmados necesarios.
+ * Interfaz que contine la firma de los metodos necesarios.
  *
  * @author ibai , jon , alex , markel
  */
 public interface Signable {
 
     /**
-     * metodo para que un usuario inicie sesion.
+     * Metodo para que un usuario inicie sesion.
      *
-     * @param user
-     * @return Un objeto User
+     * @param user un objeto User que consta de los campos "login" y "password" que se envía desde el cliente
+     * @return Un objeto User que consta de los campos "id", "login", "fullname", "email" y "password"
      * @throws LoginNotFoundException
      * @throws ConnectionNotAvaiableException
      * @throws PasswordNotFoundException
@@ -39,8 +39,8 @@ public interface Signable {
     /**
      * Metodo para que se de alta un Usuario
      *
-     * @param user
-     * @return Un objeto User
+     * @param user un usuario que se envía desde la aplicación cliente que consta de los campos "id", "login", "fullname", "email" y "password"
+     * @return Un booleano que indica si se ha realizado bien el alta del usuario
      * @throws LoginExistException
      * @throws ConnectionNotAvaiableException
      * @throws exceptions.DatabaseNotAvaiableException
@@ -51,7 +51,7 @@ public interface Signable {
      * @throws exceptions.UserFormatException
      * @throws Exception
      */
-    public User signUp(User user) throws LoginExistException,
+    public boolean signUp(User user) throws LoginExistException,
             ConnectionNotAvaiableException, DatabaseNotAvaiableException,
             EmailFormatException, FullNameFormatExeception, PasswordFormatException,
              RepeatPasswordException, UserFormatException, Exception;
