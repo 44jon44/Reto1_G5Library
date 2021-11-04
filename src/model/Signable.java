@@ -6,18 +6,12 @@
 package model;
 
 import exceptions.ConnectionNotAvailableException;
-import exceptions.DatabaseNotAvailableException;
-import exceptions.EmailFormatException;
-import exceptions.FullNameFormatExeception;
 import exceptions.LoginExistException;
 import exceptions.LoginNotFoundException;
-import exceptions.PasswordFormatException;
 import exceptions.PasswordNotFoundException;
-import exceptions.RepeatPasswordException;
-import exceptions.UserFormatException;
 
 /**
- * Interfaz que contine la firma de los metodos necesarios.
+ * Interfaz que contiene la firma de los metodos necesarios.
  *
  * @author ibai , jon , alex , markel
  */
@@ -29,12 +23,11 @@ public interface Signable {
      * @param user un objeto User que consta de los campos "login" y "password" que se envía desde el cliente
      * @return Un objeto User que consta de los campos "id", "login", "fullname", "email" y "password"
      * @throws LoginNotFoundException
-     * @throws ConnectionNotAvailableException
      * @throws PasswordNotFoundException
+     * @throws ConnectionNotAvailableException
      * @throws Exception
      */
-    public User signIn(User user) throws LoginNotFoundException,
-            ConnectionNotAvailableException, PasswordNotFoundException, Exception;
+    public User signIn(User user) throws LoginNotFoundException, PasswordNotFoundException, ConnectionNotAvailableException, Exception;
 
     /**
      * Metodo para que se de alta un Usuario
@@ -43,16 +36,7 @@ public interface Signable {
      * @return Un booleano que indica si se ha realizado bien el alta del usuario
      * @throws LoginExistException
      * @throws ConnectionNotAvailableException
-     * @throws exceptions.DatabaseNotAvailableException
-     * @throws exceptions.EmailFormatException
-     * @throws exceptions.FullNameFormatExeception
-     * @throws exceptions.PasswordFormatException
-     * @throws exceptions.RepeatPasswordException
-     * @throws exceptions.UserFormatException
      * @throws Exception
      */
-    public boolean signUp(User user) throws LoginExistException,
-            ConnectionNotAvailableException, DatabaseNotAvailableException,
-            EmailFormatException, FullNameFormatExeception, PasswordFormatException,
-             RepeatPasswordException, UserFormatException, Exception;
+    public boolean signUp(User user) throws LoginExistException, ConnectionNotAvailableException, Exception;
 }
