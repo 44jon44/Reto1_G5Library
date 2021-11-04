@@ -5,8 +5,8 @@
  */
 package model;
 
-import exceptions.ConnectionNotAvaiableException;
-import exceptions.DatabaseNotAvaiableException;
+import exceptions.ConnectionNotAvailableException;
+import exceptions.DatabaseNotAvailableException;
 import exceptions.EmailFormatException;
 import exceptions.FullNameFormatExeception;
 import exceptions.LoginExistException;
@@ -29,12 +29,12 @@ public interface Signable {
      * @param user un objeto User que consta de los campos "login" y "password" que se envía desde el cliente
      * @return Un objeto User que consta de los campos "id", "login", "fullname", "email" y "password"
      * @throws LoginNotFoundException
-     * @throws ConnectionNotAvaiableException
+     * @throws ConnectionNotAvailableException
      * @throws PasswordNotFoundException
      * @throws Exception
      */
     public User signIn(User user) throws LoginNotFoundException,
-            ConnectionNotAvaiableException, PasswordNotFoundException, Exception;
+            ConnectionNotAvailableException, PasswordNotFoundException, Exception;
 
     /**
      * Metodo para que se de alta un Usuario
@@ -42,8 +42,8 @@ public interface Signable {
      * @param user un usuario que se envía desde la aplicación cliente que consta de los campos "id", "login", "fullname", "email" y "password"
      * @return Un booleano que indica si se ha realizado bien el alta del usuario
      * @throws LoginExistException
-     * @throws ConnectionNotAvaiableException
-     * @throws exceptions.DatabaseNotAvaiableException
+     * @throws ConnectionNotAvailableException
+     * @throws exceptions.DatabaseNotAvailableException
      * @throws exceptions.EmailFormatException
      * @throws exceptions.FullNameFormatExeception
      * @throws exceptions.PasswordFormatException
@@ -52,7 +52,7 @@ public interface Signable {
      * @throws Exception
      */
     public boolean signUp(User user) throws LoginExistException,
-            ConnectionNotAvaiableException, DatabaseNotAvaiableException,
+            ConnectionNotAvailableException, DatabaseNotAvailableException,
             EmailFormatException, FullNameFormatExeception, PasswordFormatException,
              RepeatPasswordException, UserFormatException, Exception;
 }
