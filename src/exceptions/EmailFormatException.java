@@ -12,19 +12,10 @@ package exceptions;
 public class EmailFormatException extends Exception {
 
     /**
-     * Creates a new instance of <code>EmailFormatException</code> without
-     * detail message.
+     * Crea una instancia de <code>EmailFormatException</code> sin mensaje de
+     * detalle.
      */
     public EmailFormatException() {
-    }
-
-    /**
-     * Constructs an instance of <code>EmailFormatException</code> with the
-     * specified detail message.
-     *
-     * @param msg the detail message.
-     */
-    public EmailFormatException(String msg) {
         super("El formato del email no es correcto");
     }
 }

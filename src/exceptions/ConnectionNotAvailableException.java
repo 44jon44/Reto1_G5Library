@@ -11,13 +11,10 @@ package exceptions;
 public class ConnectionNotAvailableException extends Exception {
 
     /**
-     * Creates a new instance of <code>ConnectionNotAvaiableException</code>
-     * without detail message.
+     * Crea una instancia de <code>ConnectionNotAvailableException</code> sin mensaje de
+     * detalle.
      */
     public ConnectionNotAvailableException() {
-    }
-
-    public ConnectionNotAvailableException(String msg) {
         super("Error, no hay conexiones disponibles");
     }
 }

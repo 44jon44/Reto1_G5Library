@@ -12,19 +12,10 @@ package exceptions;
 public class LoginExistException extends Exception {
 
     /**
-     * Creates a new instance of <code>LoginExitException</code> without detail
-     * message.
+     * Crea una instancia de <code>LoginExistException</code> sin mensaje de
+     * detalle.
      */
     public LoginExistException() {
-    }
-
-    /**
-     * Constructs an instance of <code>LoginExitException</code> with the
-     * specified detail message.
-     *
-     * @param msg the detail message.
-     */
-    public LoginExistException(String msg) {
         super("El usuario ya existe");
     }
 }

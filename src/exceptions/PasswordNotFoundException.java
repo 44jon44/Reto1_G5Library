@@ -10,20 +10,11 @@ package exceptions;
  */
 public class PasswordNotFoundException extends Exception {
 
-    /**
-     * Creates a new instance of <code>PasswordNotFoundException</code> without
-     * detail message.
+ /**
+     * Crea una instancia de <code>PasswordNotFoundException</code> sin mensaje
+     * de detalle.
      */
     public PasswordNotFoundException() {
-    }
-
-    /**
-     * Constructs an instance of <code>PasswordNotFoundException</code> with the
-     * specified detail message.
-     *
-     * @param msg the detail message.
-     */
-    public PasswordNotFoundException(String msg) {
         super("La contraseña no es correcta");
     }
 }

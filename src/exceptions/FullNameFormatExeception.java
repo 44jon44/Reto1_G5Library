@@ -12,19 +12,10 @@ package exceptions;
 public class FullNameFormatExeception extends Exception {
 
     /**
-     * Creates a new instance of <code>FullNameFormatExeception</code> without
-     * detail message.
+     * Crea una instancia de <code>FullNameFormatExeception</code> sin mensaje de
+     * detalle.
      */
     public FullNameFormatExeception() {
-    }
-
-    /**
-     * Constructs an instance of <code>FullNameFormatExeception</code> with the
-     * specified detail message.
-     *
-     * @param msg the detail message.
-     */
-    public FullNameFormatExeception(String msg) {
         super("El formato del nombre completo no es correcto");
     }
 }

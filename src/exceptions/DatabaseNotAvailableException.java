@@ -12,19 +12,10 @@ package exceptions;
 public class DatabaseNotAvailableException extends Exception {
 
     /**
-     * Creates a new instance of <code>DatabaseNotAvaiableException</code>
-     * without detail message.
+     * Crea una instancia de <code>DatabaseNotAvailableException</code> sin mensaje de
+     * detalle.
      */
     public DatabaseNotAvailableException() {
-    }
-
-    /**
-     * Constructs an instance of <code>DatabaseNotAvaiableException</code> with
-     * the specified detail message.
-     *
-     * @param msg the detail message.
-     */
-    public DatabaseNotAvailableException(String msg) {
         super("La base de datos no se encuentra disponible");
     }
 }

@@ -11,19 +11,10 @@ package exceptions;
 public class LoginNotFoundException extends Exception {
 
     /**
-     * Creates a new instance of <code>LoginNotFoundException</code> without
-     * detail message.
+     * Crea una instancia de <code>LoginNotFoundException</code> sin mensaje de
+     * detalle.
      */
     public LoginNotFoundException() {
-    }
-
-    /**
-     * Constructs an instance of <code>LoginNotFoundException</code> with the
-     * specified detail message.
-     *
-     * @param msg the detail message.
-     */
-    public LoginNotFoundException(String msg) {
         super("El usuario introducido no existe");
     }
 }
